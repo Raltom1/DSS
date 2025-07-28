@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Department Store System</title>
+  
+  <!-- External CSS & Favicon -->
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" sizes="32x32" href="DDS_LOGO.png">
+  <link rel="shortcut icon" href="DDS_LOGO.png">
+</head>
+<body>
+
+  <div class="main-container">
+  <!-- Cashier Panel -->
+  <div class="cashier-panel">
+    <img src="DDS_LOGO.png" alt="DSS Logo" class="logo" />
+    <h2>Cashier</h2>
+
+    <label for="productCode">Product Code:</label>
+    <input type="text" id="productCode" placeholder="Enter product code" oninput="showProductDetails()" />
+
+    <div class="buttons">
+      <button id="addBtn">Add</button>
+      <button id="removeBtn">Remove</button>
+      <button id="checkoutBtn">Checkout</button>
+      <button id="clearBtn">Clear</button>
+    </div>
+
+    <hr>
+
+    <!-- Cash and Total Section -->
+    <div class="cash-info">
+      <label for="cashInput">Cash Received:</label>
+      <input type="number" id="cashInput" placeholder="Enter cash amount" />
+
+      <p><strong>Total:</strong> ₱<span id="totalPrice">0.00</span></p>
+      <p><strong>Change:</strong> ₱<span id="change">0.00</span></p>
+    </div>
+
+    <!-- Receipt Section -->
+    <div class="receipt">
+      <h3>Receipt</h3>
+      <ul id="receiptList"></ul>
+    </div>
+  </div>
+
+  <!-- Product Display -->
+  <div class="product-display">
+    <h3>Product Preview</h3>
+    <img id="productImage" src="" alt="Product Image" style="max-width: 100%; height: auto; border-radius: 10px;" />
+    <h4 id="productName"></h4>
+    <p id="productPrice"></p>
+    <p id="productDescription"></p>
+  </div>
+</div>
+
+
+
+  <script src="script.js"></script>
+</body>
+</html>
