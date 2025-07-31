@@ -116,6 +116,10 @@ button:hover {
   box-sizing: border-box;
   background-color: #f4f4f4;
   font-family: Arial, sans-serif;
+  background: linear-gradient(rgba(0, 0, 0, 0.267), rgba(0, 0, 0, 0.6)),
+              url('bg.png') no-repeat center center / cover;
+  
+  z-index: -1;
 }
 
 /* Cashier panel styling */
@@ -183,6 +187,7 @@ button:hover {
 }
 
 /* Product Display */
+/* Product Display */
 .product-display {
   background: white;
   padding: 20px;
@@ -193,23 +198,21 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.product-display h3 {
-  margin-top: 0;
-  color: #555;
-  font-size: 22px;
-  margin-bottom: 20px;
+  align-items: center; /* center horizontally */
+  overflow: hidden; /* avoid overflow issues */
 }
 
 #productImage {
-  width: 80%;
+  width: 100%;
+  height: auto;
   max-height: 400px;
   object-fit: contain;
   border: 2px solid #ccc;
   border-radius: 10px;
   background-color: #fafafa;
+  display: block;
 }
+
 
 .cash-info {
   margin-top: 20px;
