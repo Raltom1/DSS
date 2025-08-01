@@ -27,8 +27,26 @@
   </form>
 </div>
 
+<script>// Login
+   document.getElementById("loginForm").addEventListener("submit", function (e) {
+    e.preventDefault(); // Iwas reload
 
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
 
+    // Hardcoded login credentials
+    const validUsername = "admin";
+    const validPassword = "1234";
+
+    if (username === validUsername && password === validPassword) {
+      // Success
+      alert("Login successful!");
+      window.location.href = "index2.html";
+    } else {
+      // Failed login
+      alert("Invalid username or password. Please try again.");
+    }
+  });</script>
 <script src="script.js"></script>
 
 
