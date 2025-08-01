@@ -1,47 +1,30 @@
  
 
-  // Login
-   document.getElementById("loginForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Iwas reload
-
-    const username = document.getElementById("username").value;
-    const password = document.getElementById("password").value;
-
-    // Hardcoded login credentials
-    const validUsername = "admin";
-    const validPassword = "1234";
-
-    if (username === validUsername && password === validPassword) {
-      // Success
-      alert("Login successful!");
-      window.location.href = "index2.html";
-    } else {
-      // Failed login
-      alert("Invalid username or password. Please try again.");
-    }
-  });
-  //index 2 casher function
+  
+  //index 2 
 
 //  products database
+
 const products = {
   "001": {
-    name: "Softdrink",
-    price: 25,
-    description: "Refreshing cola drink.",
-    image: "https://th.bing.com/th/id/R.051fec4ae457d833ac3b2244cb794bc9?rik=8xaYLQzxWWBLrQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f-gW0Z5v73A0Q%2fVSTh1XYzFiI%2fAAAAAAAAHIk%2fxVeCA_Duahw%2fs1600%2fimg_3040.jpg&ehk=X2xkk1IM1M%2fKs%2fLfc4QEgHtTNT1KvM8de5b290bAk24%3d&risl=&pid=ImgRaw&r=0"
+    name: "Bag",
+    price: 799,
+    description: "",
+    image: "https://tse1.mm.bing.net/th/id/OIP._r4WV_aYgfRllSRmw9UeTAHaDt?rs=1&pid=ImgDetMain&o=7&rm=3"
   },
   "002": {
-    name: "Chips",
-    price: 15,
-    description: "Crunchy potato chips.",
-    image: "https://via.placeholder.com/200x150?text=Chips"
+    name: "Shoes",
+    price: 504,
+    description: "",
+    image: "https://ae01.alicdn.com/kf/HTB1SsYMXZvrK1Rjy0Feq6ATmVXax/Comfortable-Office-Men-Dress-Shoes-Spring-Autumn-Casual-Men-Shoes-Fashion-Flats-Shoes-Mens-Footwear-Plus.jpg"
   },
   "003": {
-    name: "Candy",
-    price: 5,
-    description: "Sweet and chewy candy.",
-    image: "https://via.placeholder.com/200x150?text=Candy"
+    name: "T-shirt",
+    price: 340,
+    description: "",
+    image: "https://tse2.mm.bing.net/th/id/OIP.5cN_zvKz3OajU_cv0ZJJAQHaE7?rs=1&pid=ImgDetMain&o=7&rm=3"
   }
+  
 };
 
 // State variables
@@ -125,3 +108,4 @@ function updateReceipt() {
   document.getElementById("totalPrice").textContent = total.toFixed(2);
 }
 
+document.getElementById("productImage").src = "products";
